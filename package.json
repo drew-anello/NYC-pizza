@@ -1,5 +1,5 @@
 {
-  "name": "nyc-pizza",
+  "name": "unit_2_project",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,12 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drew-anello/NYC-pizza.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drew-anello/NYC-pizza/issues"
+  },
+  "homepage": "https://github.com/drew-anello/NYC-pizza#readme",
   "dependencies": {
-    "dotenv": "^16.0.2",
-    "express": "^4.18.1",
-    "mongoose": "^6.6.0"
+    "nodmeon": "^0.0.1-security"
   }
 }
