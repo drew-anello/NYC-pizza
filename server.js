@@ -8,6 +8,9 @@ const PORT = process.env.PORT
 
 
 // Index
+('/', (req, res) => {
+    res.send('hello world')
+})
 
 // New
 
