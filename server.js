@@ -1,16 +1,14 @@
 // Dependencies
-const express = require('express')
+const express = require('express');
+const { default: mongoose } = require('mongoose');
 const app = express()
 require('dotenv').config()
 const PORT = process.env.PORT || 3000;
-
-
+const mongoose = require('mongoose')
 
 
 // Index
-('/', (req, res) => {
-    res.send('hello world')
-})
+
 
 // New
 
@@ -25,6 +23,6 @@ const PORT = process.env.PORT || 3000;
 // Show
 
 // listener
-app.listen(PORT, (req, res) => {
+app.listen(PORT, () => {
     console.log('happy birthday mr president')
 })
