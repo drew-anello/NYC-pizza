@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000;
 
 
 
@@ -26,6 +26,5 @@ const PORT = process.env.PORT
 
 // listener
 app.listen(PORT, (req, res) => {
-console.log('happy birthday mr president')   
+    console.log('happy birthday mr president')
 })
-
