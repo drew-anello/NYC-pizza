@@ -46,6 +46,24 @@ app.delete("/pizza/:id", (req, res) => {
 });
 
 // Update
+app.put("/pizza/:id", (req, res) => {
+    if (req.body.completed === "on") {
+        req.body.completed = true
+    } else {
+        req.body.completed = false
+    }
+
+    pizzaTime.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {
+            new: true,
+        },
+        (error, updatedBook) => {
+            res.redirect(`/pizza/${req.params.id}`)
+        }
+    )
+});
 
 // Create
 
