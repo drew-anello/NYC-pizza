@@ -6,7 +6,4 @@ have you ever taken a trip to a borough and wanted to find the best pizza place.
 
 ### Technologies used
 
--Express.JS
--EJS
--CSS
--Heroku
+Express.JS, EJS, CSS, Heroku
