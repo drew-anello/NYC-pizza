@@ -8,26 +8,19 @@
     <!-- <link rel="stylesheet" href="/stylesheet/style.css" /> -->
   </head>
   <body>
-    <h1>How You Dooin?</h1>
     <nav>
-      <ul>
-        <%pizza.forEach(pizza => {%>
-        <li><%=pizza.name %></li>
-        <%})%>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/pizza/new">Add a Slice</a>
-        </li>
-        <!-- <li>
-        <a href=""></a>
-      </li> -->
-      </ul>
-      <form id="search">
-        <input type="text" placeholder="Name of Shop or Borough" />
-        <input type="submit" value="Lets Go" />
-      </form>
+      <a href="/pizza/new">Add a Slice</a>
     </nav>
+    <h1>How You Dooin?</h1>
+    <ul>
+      <%pizza.forEach(pizza => {%>
+      <li><%=pizza.name %></li>
+      <%})%>
+      </li>
+    </ul>
+    <form id="search">
+      <input type="text" placeholder="Name of Shop or Borough" />
+      <input type="submit" value="Lets Go" />
+    </form>
   </body>
 </html>
