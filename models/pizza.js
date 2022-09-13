@@ -13,4 +13,5 @@ const pizzaSchema = new Schema({
     rating: Number
 }
 )
-const pizza = mongoose.model('pizza', pizzaSchema)
+const pizzaTime = mongoose.model('Pizza', pizzaSchema)
+module.exports = pizzaTime
