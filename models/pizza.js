@@ -1,13 +1,13 @@
-const { default: mongoose } = require("mongoose")
+const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 const pizzaSchema = new Schema ({
 	name: { type: String, required: true },
-	adress: { type: String, required: true },
+	address: { type: String, required: true },
 	borough: { type: String, required: true },
 	review: { type: [String], required: true },
-	score: { type: Number, min: 0.1, max: 10.0, required: true },
+	score: { type: Number, min: 0, max: 10, required: true },
 
 })
-const pizzaTime = mongoose.model('Pizza', pizzaSchema)
-module.exports = pizzaTime
+const PizzaTime = mongoose.model('PizzaTime', pizzaSchema)
+module.exports = PizzaTime

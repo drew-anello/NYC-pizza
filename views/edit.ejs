@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Pizza</title>
 </head>
 <body>
     <h1>Edit Pizza</h1>
     <form action="/pizza/<%=pizza._id%>?_method=PUT" method="POST">
         <!--  NOTE: the form is pre-populated with values for the server-->
-        Name: <input type="text" name="name" value="<%=pizza.name%>" /><br />
+        Name: <input type="text" name="name" value="<%= pizza.name %>" /><br />
         Adress: <input type="text" name="adress" value="<%=pizza.adress%>" /><br />
         Borough: <input type="text" name="borough" value="<%=pizza.borough%>" /><br />
         Rating: <input type="number" name="rating" min="0" max="10" value="<%=pizza.rating%>" /><br />

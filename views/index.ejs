@@ -11,6 +11,9 @@
     <h1>How You Dooin?</h1>
     <nav>
       <ul>
+        <%pizza.forEach(pizza => {%>
+        <li><%=pizza.name %></li>
+        <%})%>
         <li>
           <a href="/">Home</a>
         </li>
