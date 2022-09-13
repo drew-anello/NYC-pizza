@@ -29,6 +29,10 @@ app.get('/', (req,res) => {
     res.render('index.ejs')
 })
 // New
+app.get('/pizza/new', (req, res) => {
+    res.render('pizza/new.ejs')
+})
+
 
 // Delete
 
