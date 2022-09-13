@@ -26,7 +26,11 @@ app.use(express.static('stylessheet'))  // use folder for CSS
 app.use('/pizzaTime', pizzaController)
 // Index
 app.get('/', (req,res) => {
-    res.render('index.ejs')
+    pizzaTime.find({}, (error, allPizza) => {
+        res.render('index.ejs', {
+            pizza: allPizza,
+        });
+    });
 })
 // New
 app.get('/pizza/new', (req, res) => {

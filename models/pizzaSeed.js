@@ -4,4 +4,4 @@ module.exports = [ {
 	borough: `Queens`,
 	review: `Best Slice!`,
 	score: 9.3,
-}]
+} ]
