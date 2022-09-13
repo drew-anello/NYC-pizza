@@ -39,6 +39,11 @@ app.get('/pizza/new', (req, res) => {
 
 
 // Delete
+app.delete("/pizza/:id", (req, res) => {
+    pizzaTime.findByIdAndDelete(req.params.id, (err, data) => {
+        res.redirect("/pizza")
+    })
+});
 
 // Update
 
