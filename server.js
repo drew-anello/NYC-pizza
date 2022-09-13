@@ -3,6 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override')
 const app = express()
+const pizzaTime = require('./models/pizza')
+const pizzaController = require('./controllers/pizza')
 require('dotenv').config()
 const PORT = process.env.PORT || 3000;
 let DATABASE_URI= process.env.DATABASE_URI
@@ -16,6 +18,12 @@ db.on('error', (err) => console.log(err.message + ' is mongo not running?'));
 db.on('connected', () => console.log('mongo connected'));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
+// mount middleware
+app.use(express.urlencoded({ extended: false })); // gives access to req.body
+app.use(methodOverride('_method')); // allows us to use methods other than get and post
+app.use(express.static('public')); // can use public folder for CSS
+
+app.use('pizzaTime', pizzaController)
 // Index
 app.get('/', (req,res) => {
     res.render('index.ejs')
@@ -34,12 +42,8 @@ app.get('/addshop', (req, res) => {
     res.render('edit.ejs')
 })
 
-// Sho w
+// Show
 
-// mount middleware
-app.use(express.urlencoded({ extended: false })); // gives access to req.body
-app.use(methodOverride('_method')); // allows us to use methods other than get and post
-app.use(express.static('public')); // can use public folder for CSS
 
 // listener
 app.listen(PORT, () => {
