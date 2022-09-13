@@ -18,7 +18,11 @@ app.get('/', (req,res) => {
 
 // Create
 
+
 // Edit
+app.get('/addshop', (req, res) => {
+    res.render('edit.ejs')
+})
 
 // Show
 
