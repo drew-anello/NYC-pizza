@@ -1,6 +1,7 @@
-const express = require('express')
-const router = express.Router()
+const router = require('express').Router();
 
+
+// define routes/controllers
 
 // N
 // D
@@ -16,4 +17,5 @@ const router = express.Router()
 //     res.send(`get users with id ${req.params.id}`)
 // })
 
+// exports
 module.exports = router

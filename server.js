@@ -1,10 +1,20 @@
 // Dependencies
 const express = require('express');
-const { default: mongoose } = require('mongoose');
+const mongoose = require('mongoose');
+const methodOverride = require('method-override')
 const app = express()
 require('dotenv').config()
 const PORT = process.env.PORT || 3000;
+let DATABASE_URI= process.env.DATABASE_URI
 
+app.set('view engine', 'ejs')
+
+// database config
+mongoose.connect(DATABASE_URI);
+const db = mongoose.connection;
+db.on('error', (err) => console.log(err.message + ' is mongo not running?'));
+db.on('connected', () => console.log('mongo connected'));
+db.on('disconnected', () => console.log('mongo disconnected'));
 
 // Index
 app.get('/', (req,res) => {
@@ -24,13 +34,14 @@ app.get('/addshop', (req, res) => {
     res.render('edit.ejs')
 })
 
-// Show
+// Sho w
+
+// mount middleware
+app.use(express.urlencoded({ extended: false })); // gives access to req.body
+app.use(methodOverride('_method')); // allows us to use methods other than get and post
+app.use(express.static('public')); // can use public folder for CSS
 
 // listener
-
-const userRouter = require('./routes/users')
-app.use('/users', userRouter)
-
 app.listen(PORT, () => {
     console.log('happy birthday mr president')
 })
