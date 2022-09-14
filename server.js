@@ -50,13 +50,6 @@ app.get('/pizza/new', (req, res) => {
 
 
 // Delete
-// app.delete('/pizza/:id', (req, res) => {
-//     PizzaTime.findByIdAndRemove(req.params.id, (err, data) => {
-//         res.redirect('/pizza')
-//     })
-// })
-
-
 app.delete("/pizza/:id", (req, res) => {
     PizzaTime.findByIdAndDelete(req.params.id, (err, data) => {
         res.redirect("/pizza")
