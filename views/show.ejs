@@ -11,9 +11,18 @@
         <nav>
             <a href="/pizza">Find Slices</a>
         </nav>
+        <a href="/pizza/<%=pizza._id%>/edit">Edit</a>
     
-        <h1> <%= pizza.id %> </h1>
-        Name: <%= pizza.name%>
+        <h1> <%= pizza.name %> </h1>
+         <%= pizza.address%>
+        <br>        
+         <%= pizza.borough%>
+         <br>
+         <%= pizza.rating%>
+         <br>
+         <%= pizza.review%>
+
+
       
 </body>
   </body>

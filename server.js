@@ -86,11 +86,12 @@ app.post('/pizza', (req, res) => {
 
 
 // // Edit
-app.get('/edit/:id', (req, res) => {
-    PizzaTime.findById(req.params.id,( err, foundPizzaTime) => {
-    res.render('pizza/edit.ejs')
-   }) 
-})
+app.get("/pizza/:id/edit", (req, res) => {
+    PizzaTime.findById(req.params.id, (err, data) => {
+        res.render("edit.ejs", {pizza : data})
+
+    })
+});
 
 // // Show
 app.get('/pizza/:id', (req, res) => {

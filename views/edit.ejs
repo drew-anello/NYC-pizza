@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Pizza</title>
-</head>
-<body>
-    <h1>Edit Pizza</h1>
-    <form action="/pizza/<%=pizzatime._id%>?_method=PUT" method="POST">
-        <!--  NOTE: the form is pre-populated with values for the server-->
-        Name: <input type="text" name="name" value="<%= pizza.name %>" /><br />
-        Adress: <input type="text" name="adress" value="<%=pizza.adress%>" /><br />
-        Borough: <input type="text" name="borough" value="<%=pizza.borough%>" /><br />
-        Rating: <input type="number" name="rating" min="0" max="10" value="<%=pizza.rating%>" /><br />
-        Review: <input type="text" name="review" value="<%=pizza.review%>" /><br />
-            <br />
-            <input type="submit" value="Submit Changes" />
-    
-</body>
+  </head>
+  <body>
+    <h1><%= pizza.name %></h1>
+    <form action="/pizza/<%=pizza.id; %>?_method=PUT" method="POST"> Name:
+    <input type="text" name="name" value="<%=pizza.name %>" /> Address:
+    <input type="text" name="address" value="<%=pizza.address; %>" /> Borough:
+    <input type="text" name="borough" value="<%=pizza.borough; %>" />
+    <br />
+    Rating: <input type="number" name="rating" value="<%=pizza.rating; %>" /> Review:
+    <input type="text" name="review" value="<%=pizza.review; %>" />
+    <input type="submit" value="Add Slice" />
+  </body>
 </html>
