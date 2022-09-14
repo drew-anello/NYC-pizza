@@ -12,10 +12,16 @@
       <a href="/pizza/new">Add a Slice</a>
     </nav>
     <h1>How You Dooin?</h1>
+    <br />
     <ul>
-      <%pizza.forEach(pizza => {%>
-      <li><%=pizza.name %></li>
-      <%})%>
+      <li><% pizza.forEach(pizza => { %></li>
+      <li><%=pizza.name; %></li>
+      <% }) %>
+      <li>
+        <a href="/pizza/<%= pizza._id; %> "><%= pizza.name; %> </a>
+        <form>
+          <input type="submit" value="DELETE" />
+        </form>
       </li>
     </ul>
     <form id="search">

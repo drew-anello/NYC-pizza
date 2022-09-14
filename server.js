@@ -49,27 +49,27 @@ app.get('/pizza/new', (req, res) => {
 })
 
 
-// // Delete
-// app.delete("/pizza/:id", (req, res) => {
-//     PizzaTime.findByIdAndDelete(req.params.id, (err, data) => {
-//         res.redirect("/pizza")
-//     })
-// });
+// Delete
+app.delete("/pizza/:id", (req, res) => {
+    PizzaTime.findByIdAndDelete(req.params.id, (err, data) => {
+        res.redirect("/pizza")
+    })
+});
 
 // // Update
-// app.put("/pizza/:id", (req, res) => {
+app.put("/pizza/:id", (req, res) => {
 
-//     PizzaTime.findByIdAndUpdate(
-//         req.params.id,
-//         req.body,
-//         {
-//             new: true,
-//         },
-//         (error, updatedPizza) => {
-//             res.redirect(`/pizza/${req.params.id}`)
-//         }
-//     )
-// });
+    PizzaTime.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {
+            new: true,
+        },
+        (error, updatedPizza) => {
+            res.redirect(`/pizza/${req.params.id}`)
+        }
+    )
+});
 
 // // Create
 app.post('/pizza', (req, res) => {
@@ -91,6 +91,11 @@ app.post('/pizza', (req, res) => {
 // // })
 
 // // Show
+app.get('/pizza/:id', (req, res) => {
+    PizzaTime.findById(req.params.id, (err, foundPizzaTime) => {
+        res.send(foundPizzaTime)
+    })
+})
 
 
 // listener
