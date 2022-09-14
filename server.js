@@ -1,6 +1,6 @@
  // Dependencies
 const express = require('express');
-//  const methodOverride = require('method-override')
+ const methodOverride = require('method-override')
 const app = express()
 const mongoose = require('mongoose')
 const PizzaTime = require('./models/pizza')
@@ -23,7 +23,7 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 
 // // mount middleware
 app.use(express.urlencoded({ extended: false })); //  access to req.body
-// app.use(methodOverride('_method')) // allows methods besides get and post
+app.use(methodOverride('_method')) // allows methods besides get and post
 // app.use(express.static('stylessheet'))  // use folder for CSS
 
 // // app.use('/PizzaTime', pizzaController)
@@ -73,9 +73,8 @@ app.get('/pizza/new', (req, res) => {
 
 // // Create
 app.post('/pizza', (req, res) => {
-    res.send(req.body)
     PizzaTime.create(req.body, (error, createdPizzaTime) => {
-        res.send(createdPizzaTime)
+        res.redirect('/pizza')
   })
 })
 // app.post("/", (req, res) => {
@@ -95,6 +94,7 @@ app.post('/pizza', (req, res) => {
 
 
 // listener
+
 app.listen(PORT, () => {
     console.log('happy birthday mr president')
 })
