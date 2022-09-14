@@ -29,9 +29,9 @@ app.use(methodOverride('_method')) // allows methods besides get and post
 // // app.use('/PizzaTime', pizzaController)
 // // Index
 app.get('/pizza', (req, res) => {
-    PizzaTime.find({}, (error, allPizza) => {
+    PizzaTime.find({}, (error, allPizzas) => {
         res.render('index.ejs', {
-            pizza: allPizza,
+            allPizzas
         })
     })
 })
@@ -95,7 +95,9 @@ app.get('/edit/:id', (req, res) => {
 // // Show
 app.get('/pizza/:id', (req, res) => {
     PizzaTime.findById(req.params.id, (err, foundPizzaTime) => {
-        res.render('show.ejs')
+        res.render('show.ejs', {
+            pizza: foundPizzaTime
+        })
     })
 })
 

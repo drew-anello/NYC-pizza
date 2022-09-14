@@ -6,28 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find a Slice</title>
   </head>
-  
-  
+
   <body>
-    
     <nav>
       <button><a href="/pizza/new">Add a Slice</a></button>
     </nav>
 
     <h1>How You Dooin?</h1>
-    
+
     <ul>
-      <% pizza.forEach(pizza => { %>
+      <% allPizzas.forEach(pizza => { %>
       <li>
         <a href="/pizza/<%=pizza.name; %>"> <%=pizza.name; %> </a>
 
-        <form style="display: inline" action="/pizza/ <%= pizza._id %>?_method=POST" method="POST">
+        <form
+          style="display: inline"
+          action="/pizza/<%= pizza.name %>?_method=POST"
+          method="POST"
+        >
           <input type="submit" value="DELETE" />
         </form>
-
       </li>
       <% }) %>
-    
     </ul>
     <!-- <form id="search">
       <input type="text" placeholder="Name of Shop or Borough" />
