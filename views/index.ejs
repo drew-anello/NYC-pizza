@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Find a Slice</title>
+    
   </head>
 
   <body>
@@ -17,13 +19,9 @@
     <ul>
       <% allPizzas.forEach(pizza => { %>
       <li>
-        <a href="/pizza/<%=pizza.name; %>"> <%=pizza.name; %> </a>
+        <a href="/pizza/<%=pizza.id; %>"> <%=pizza.name; %> </a>
 
-        <form
-          style="display: inline"
-          action="/pizza/<%= pizza.name %>?_method=POST"
-          method="POST"
-        >
+        <form action="/pizza/<%= pizza.id %>/delete/" method="POST">
           <input type="submit" value="DELETE" />
         </form>
       </li>

@@ -24,7 +24,7 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 // // mount middleware
 app.use(express.urlencoded({ extended: false })); //  access to req.body
 app.use(methodOverride('_method')) // allows methods besides get and post
-// app.use(express.static('stylessheet'))  // use folder for CSS
+app.use(express.static('public'))  // use folder for CSS
 
 // // app.use('/PizzaTime', pizzaController)
 // // Index
@@ -50,7 +50,7 @@ app.get('/pizza/new', (req, res) => {
 
 
 // Delete
-app.delete("/pizza/:id", (req, res) => {
+app.post("/pizza/:id/delete", (req, res) => {
     PizzaTime.findByIdAndDelete(req.params.id, (err, data) => {
         res.redirect("/pizza")
     })
