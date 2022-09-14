@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find a Slice</title>
-    <!-- <link rel="stylesheet" href="/stylesheet/style.css" /> -->
   </head>
   <body>
     <nav>
@@ -14,18 +13,22 @@
     <h1>How You Dooin?</h1>
     <ul>
       <% pizza.forEach(pizza => { %>
-      <li><%=pizza.name; %></li>
-      <% }) %>
       <li>
         <a href="/pizza/<%=pizza._id; %>"> <%=pizza.name; %> </a>
+
+        <form
+          style="display: inline"
+          action="/pizza/ <%= pizza.id %>?_method=DELETE"
+          method="POST"
+        >
+          <input type="submit" value="DELETE" />
+        </form>
       </li>
-      <form action="/pizza/ <%= pizza.id %>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE" />
-      </form>
+      <% }) %>
     </ul>
-    <form id="search">
+    <!-- <form id="search">
       <input type="text" placeholder="Name of Shop or Borough" />
       <input type="submit" value="Lets Go" />
-    </form>
+    </form> -->
   </body>
 </html>
