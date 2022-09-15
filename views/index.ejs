@@ -24,7 +24,7 @@
     <ul>
       <% allPizzas.forEach(pizza => { %>
       <li>
-        <a href="/pizza/<%=pizza.id; %>"> <%=pizza.name; %> </a>
+        <a class="shops" href="/pizza/<%=pizza.id; %>"> <%=pizza.name; %> </a>
 
         <form action="/pizza/<%= pizza.id %>/delete/" method="POST">
           <input class="delete" type="submit" value="DELETE" />

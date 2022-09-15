@@ -2,22 +2,54 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+ul, li {
+    list-style-type: none;
+}
+.index ul li {
+padding-left: 14%;
+}
 .home {
     background-image: url('pictures/pizza-slice-crimp.webp');
     background-repeat: no-repeat;
    background-size: cover;
-
 }
 .home h1 {
+font-size: 60px;
 text-align: center;
 color: #FAFF81;
 text-shadow: 2px 2px #ff0000
 }
+.home nav {
+    text-align: center;
+  display: block;
+  font-size: xx-large;
+}
+.home a {
+    color: black;
+    font-family: "Comic Sans Ms", "Comic Sans", cursive;
+    font-size: 30px;
+    
+} 
+.home button {
+    height: 45px;
+    width: 400px;
+    padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  color: #82968c;
+  border: 1px solid #82968c;
+  border-radius: 15px;
+  box-shadow: 2px 2px #ff0000;
+
+}
+
 .index   {
     background-image: url('pictures/cugine-2-1.jpg.webp');
     background-repeat: no-repeat;
     display: block;
-    background-size:contain;
+    background-size:cover;
     font-family: 'Bungee Spice', cursive;
 font-family: 'Roboto', sans-serif;  
 }
@@ -25,6 +57,8 @@ font-family: 'Roboto', sans-serif;
     text-align: center;
 color: red;
 font-weight: bolder;
+position: relative;
+padding-right: 25%;
 } 
  .index nav {
   text-align: center;
@@ -32,18 +66,32 @@ font-weight: bolder;
   font-size: xx-large;
 }
 .index nav:hover{
-    background-color: orange;
-}
-.index a {
-    font-size: xx-large;
-    color: papayawhip;
+    color: black;
+    font-family: "Comic Sans Ms", "Comic Sans", cursive;
 }
 .add {
     color: black;
     font-family: "Comic Sans Ms", "Comic Sans", cursive;
-
+    font-size: xx-large;
+}
+.index button {
+    height: 45px;
+    width: 400px;
+    padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  color: #82968c;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  box-shadow: 2px 2px #ff0000;
 }
 
+.shops {
+    font-size: xx-large;
+    color: papayawhip;
+}
 .new  {
     background-image: url('./pictures/pizzatime.webp');
     background-repeat: no-repeat;
