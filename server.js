@@ -28,6 +28,13 @@ app.use(methodOverride('_method')) // allows methods besides get and post
 app.use(express.static('public'))  // use folder for CSS
 
 // // app.use('/PizzaTime', pizzaController)
+
+// landing page
+
+app.get('/', (req, res) => {
+    res.render('landing.ejs')
+})
+
 // // Index
 app.get('/pizza', (req, res) => {
     PizzaTime.find({}, (error, allPizzas) => {
