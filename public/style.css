@@ -52,9 +52,9 @@ text-shadow: 2px 2px #ff0000
 font-family: 'Roboto', sans-serif;  
 }
 .index h1 {
-    text-align: center;
+text-align: center;
 color: red;
-b-shadow: 2px, 2px rgb(3, 3, 3);
+text-shadow: 2px 2px rgb(3, 3, 3);
 font-weight: bolder;
 position: relative;
 padding-right: 25%;
@@ -74,7 +74,8 @@ padding-right: 25%;
     font-size: xx-large;
 }
 .index ul li {
-padding-left: 14%;
+padding-left: 12%;
+text-shadow: 2px 2px black;
 }
 .index button {
     height: 45px;
