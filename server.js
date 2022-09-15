@@ -47,6 +47,7 @@ app.get('/pizza', (req, res) => {
 // // New
 app.get('/pizza/new', (req, res) => {
     res.render('new.ejs')
+    
 })
 
 

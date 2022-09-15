@@ -1,10 +1,58 @@
-body {
-    text-align: center;
+.index   {
+    background-image: url('pictures/cugine-2-1.jpg.webp');
+    background-repeat: no-repeat;
+    display: block;
+    background-size: cover;
     font-family: 'Bungee Spice', cursive;
-    font-family: 'Roboto', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+    
+}
+.index h1 {
+    text-align: center;
+color: red;
+font-weight: bolder;
+} 
+  nav {
+  text-align: center;
+  display: block;
+  font-size: xx-large;
+}
+nav:hover{
+    background-color: orange;
+}
+a {
+    font-size: xx-large;
+    color: papayawhip;
+}
+.add {
+    color: black;
+    font-family: "Comic Sans Ms", "Comic Sans", cursive;
 
 }
 
-ul, li {
-list-style: none;
+ ul li {
+    list-style: none;
+    font-size: 50px;
+    position: relative; left: 80px;
+    
+    
+}
+.new  {
+    background-image: url('./pictures/pizzatime.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    font-family: 'Bungee Spice', cursive;
+font-family: 'Roboto', sans-serif;
+
+}
+.new form {
+position: relative; left: 500px;
+display: grid;
+size: 200px;
+color: white;
+height: 40px;
+width: 50px;
+
 }
