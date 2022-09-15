@@ -1,8 +1,11 @@
 body {
-    background-image: url('./pictures/cugine-2-1.jpg.webp');
+    background-image: url('./pictures/pizzatime.webp');
     background-repeat: no-repeat;
     display: block;
     background-size: cover;
+    font-family: 'Bungee Spice', cursive;
+font-family: 'Roboto', sans-serif;
+
     
 }
 h1 {
@@ -19,11 +22,18 @@ nav:hover{
 }
 a {
     font-size: xx-large;
-    color: tomato;
+    color: papayawhip;
+}
+.add {
+    color: black;
+    font-family: "Comic Sans Ms", "Comic Sans", cursive;
+
 }
 
 ul, li {
     list-style: none;
     font-size: 50px;
+    position: relative; left: 80px;
+    
     
 }
