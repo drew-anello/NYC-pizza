@@ -1,6 +1,7 @@
 body {
-    background-image: url('./public/pictures/pizzatime.webp');
+    /* background-image: url('./pictures/pizzatime.webps');
     background-repeat: no-repeat;
     display: block;
-    background-size: cover;
+    background-size: cover; */
+    background-color: papayawhip;
 }
