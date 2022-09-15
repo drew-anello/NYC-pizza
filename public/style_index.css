@@ -14,7 +14,7 @@ color: red;
   display: block;
   font-size: xx-large;
 }
-nav: :hover{
+nav:hover{
     background-color: orange;
 }
 a {
