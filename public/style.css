@@ -1,3 +1,10 @@
 body {
+    text-align: center;
+    font-family: 'Bungee Spice', cursive;
+font-family: 'Roboto', sans-serif;
 
+}
+
+ul, li {
+list-style: none;
 }

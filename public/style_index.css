@@ -1,0 +1,29 @@
+body {
+    background-image: url('./pictures/cugine-2-1.jpg.webp');
+    background-repeat: no-repeat;
+    display: block;
+    background-size: cover;
+    
+}
+h1 {
+    text-align: center;
+color: red;
+} 
+ nav {
+  text-align: center;
+  display: block;
+  font-size: xx-large;
+}
+nav: :hover{
+    background-color: orange;
+}
+a {
+    font-size: xx-large;
+    color: tomato;
+}
+
+ul, li {
+    list-style: none;
+    font-size: 50px;
+    
+}

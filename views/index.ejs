@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style_index.css" />
     <title>Find a Slice</title>
   </head>
 
   <body class="index">
     <nav>
       <button><a href="/pizza/new">Add a Slice</a></button>
+      <!-- <button><a href="/pizza/boroughs">Boroughs</a></button> -->
     </nav>
 
     <h1>How You Dooin?</h1>
@@ -21,10 +28,9 @@
         <a href="/pizza/<%=pizza.id; %>"> <%=pizza.name; %> </a>
 
         <form action="/pizza/<%= pizza.id %>/delete/" method="POST">
-          <input type="submit" value="DELETE" />
+          <input class="delete" type="submit" value="DELETE" />
         </form>
       </li>
-
       <% }) %>
     </ul>
     <!-- <form id="search">

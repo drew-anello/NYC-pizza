@@ -6,7 +6,8 @@ const mongoose = require('mongoose')
 const PizzaTime = require('./models/pizza')
 // // const pizzaController = require('./controllers/pizza')
 require('dotenv').config()
-const PORT = process.env.PORT || 3000
+
+    
 let DATABASE_URL= process.env.DATABASE_URL
 
 app.set('view engine', 'ejs')
@@ -104,7 +105,7 @@ app.get('/pizza/:id', (req, res) => {
 
 
 // listener
-
+const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log('happy birthday mr president')
 })
