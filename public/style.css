@@ -5,9 +5,7 @@ body {
 ul, li {
     list-style-type: none;
 }
-.index ul li {
-padding-left: 14%;
-}
+
 .home {
     background-image: url('pictures/pizza-slice-crimp.webp');
     background-repeat: no-repeat;
@@ -56,6 +54,7 @@ font-family: 'Roboto', sans-serif;
 .index h1 {
     text-align: center;
 color: red;
+b-shadow: 2px, 2px rgb(3, 3, 3);
 font-weight: bolder;
 position: relative;
 padding-right: 25%;
@@ -73,6 +72,9 @@ padding-right: 25%;
     color: black;
     font-family: "Comic Sans Ms", "Comic Sans", cursive;
     font-size: xx-large;
+}
+.index ul li {
+padding-left: 14%;
 }
 .index button {
     height: 45px;
@@ -102,12 +104,72 @@ font-family: 'Roboto', sans-serif;
 
 }
 .new form {
-position: relative; left: 500px;
+position: relative; left: 550px;
 display: grid;
 color: white;
 height: 40px;
 
 }
-.new input {
+.name, .address, .borough, .score {
+    height: 25px;
+    width: 200px;
+    font-size: 20px;
 
+}
+.review {
+    font-size: 20px;
+    word-wrap: normal;
+    height: 50px;
+    width: 200px;
+}
+.newslice {
+    height: 45px;
+    width: 200px;
+    padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  color: #FAFF81;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  box-shadow: 2px 2px #ff0000;
+}
+
+.show {
+    background-image: url("pictures/pizzatime.jpeg");
+    background-repeat: no-repeat;
+   background-size: cover;
+image-rendering: pixelated;
+image-rendering: auto;
+}
+
+.show h1 {
+    text-align: center;
+    color: #FAFF81;
+    text-shadow: 2px 2px #ff0000;
+    font-size: 60px;
+}
+.show nav {
+    text-align: center;
+    color: #FAFF81;
+    text-shadow: 2px 2px #ff0000;
+    font-size: 40px;
+    border: none;
+    border-radius: 15px;
+   
+}
+
+.show a {
+    color: black;
+    font-family: "Comic Sans Ms", "Comic Sans", cursive;
+    text-align: center;
+    text-shadow: 2px 2px #ff0000;
+    font-size: 40px;
+}
+.show1 {
+    text-align: center;
+    color: #FAFF81;
+    text-shadow: 2px 2px #ff0000;
+    font-size: 40px;
 }

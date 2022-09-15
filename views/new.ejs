@@ -9,13 +9,17 @@
   </head>
   <body class="new">
         <form action="/pizza" method="POST">
-          Name: <input type="text" name="name" placeholder="Name" />
-          Address: <input type="text" name="address" placeholder="Address" />
-          Borough: <input type="text" name="borough" placeholder="Borough" />
+          Name: <input class="name" type="text" name="name" placeholder="Name" />
+          <br>
+          Address: <input class="address" type="text" name="address" placeholder="Address" />
+          <br>
+          Borough: <input class="borough" type="text" name="borough" placeholder="Borough" />
           <br />
-          Rating: <input type="number" name="rating" step="any" min="0" max="10" placeholder="1-10" />
-         Review: <input type="text" name="review" placeholder="review" />
-          <input type="submit" value="Add Slice" />
+          Rating: <input class="score" type="number" name="rating" step="any" min="0" max="10" placeholder="1-10" />
+         <br>
+          Review: <input class="review" type="text" name="review"  placeholder="review" />
+          <br>
+          <input class="newslice" type="submit" value="Add Slice" />
         </form>
       </ul>
     </nav>
