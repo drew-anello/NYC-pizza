@@ -6,7 +6,7 @@ have you ever taken a trip to a borough and wanted to find the best pizza place.
 
 ### Technologies used
 
-Express.JS, EJS, CSS, Heroku
+Express.JS, EJS, CSS, MongoDB, Heroku
 
 future enhancements include- user login, sorting pizza by burrough in a drop down menu, user making their own list in profile and filtering from highest score to lowest
 
