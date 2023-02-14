@@ -58,7 +58,7 @@ ul, li {
 
 .index h1 {
     text-align: center;
-    color: red;
+    color: rgb(238, 64, 64);
     text-shadow: 0.2em 0.2em rgb(3, 3, 3);
     font-weight: bolder;
     position: relative;
@@ -175,7 +175,7 @@ ul, li {
 }
 .show1 {
   text-align: center;
-  color: #FAFF81;
+  color: #c5c5b8;
   text-shadow: 2px 2px #ff0000;
   font-size: 40px;
 }
@@ -226,7 +226,7 @@ ul, li {
   font: inherit;
   color: inherit;
   cursor: pointer;
-  color: #FAFF81;
+  color: black;
   border: 1px solid #000000;
   border-radius: 15px;
   box-shadow: 2px 2px #ff0000;
